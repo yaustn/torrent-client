@@ -1,8 +1,11 @@
 build:
-	go build -o bin/main
+	go build -o bin/main cmd/main.go
 
 run: build
-	./bin/app
+	./bin/main
+
+clean:
+	rm -rf bin
 
 test:
 	go test -v ./... -count=1
